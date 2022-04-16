@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/task1.css">
 </head>
 
-<body style="background-color: rgb(206, 235, 225); text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    <nav style="text-align: left">
+<body>
+    <nav>
         <ul>
             <li>
                 <a href="./home.html">עמוד הבית</a>
+            </li>
+            <li>
+                <a>קצת עלינו</a>
+            </li>
+            <li>
+                <a>תקנון</a>
             </li>
             <li>
                 <a href="./contact.html">צור קשר</a>
@@ -21,11 +28,11 @@
     </nav>
     <div>
         <h1>צרו קשר</h1>
-        <hr/>
-        <p style="padding-top: 10px;">אנא מלאו את הפרטים הבאים, ונמצא עבורכם את החופשה החלומית</p>
+        <hr />
+        <p id="intro-para">אנא מלאו את הפרטים הבאים, ונמצא עבורכם את החופשה החלומית</p>
     </div>
-    
-    <div style= "padding-top: 16px;">
+
+    <div id="contact-form">
         <form>
             <label for="FName">שם פרטי</label> <br>
             <input type="text" id="FName" name="FName" minlength="2" required><br>
@@ -33,13 +40,30 @@
             <input type="text" id="LName" name="LName" minlength="2" required><br>
             <label for="email">אימייל</label><br>
             <input type="email" id="email" name="email" required><br>
+            <label for="price">טווח מחירים</label><br>
+            <select class="select-price" name="price">
+                <option value="100-299">100-300</option>
+                <option value="300-599">300-599</option>
+                <option value="600-1000">600-1000</option>
+            </select><br>
             <label for="num">מספר נפשות</label><br>
             <input type="number" id="num" name="num" min="1" value="2"><br>
             <label for="agree">אני מאשר לקבל הודעות מאתר החיים הטובים</label> <br>
             <input type="checkbox" id="agree" name="agree" required><br>
             <button> submit </button>
-        </form>        
+        </form>
     </div>
+    <footer class="footer" style="padding-top: 110px">
+        <div id="phone">
+            <label>052-3456789</label>
+        </div>
+        <span>goodlife@gmail.com</span>
+        <div id="logos">
+            <img class="logo" src="../static/insta-logo.png" />
+            <img class="logo" src="../static/twiter-logo.png" />
+            <img class="logo" src="../static/facebook-logo.png" />
+        </div>
+    </footer>
 </body>
 
 </html>

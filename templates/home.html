@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/task1.css">
 </head>
-<body style="background-color: rgb(206, 235, 225); text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    <nav style="text-align: left">
+
+<body>
+    <nav>
         <ul>
             <li>
                 <a href="./home.html">עמוד הבית</a>
+            </li>
+            <li>
+                <a>קצת עלינו</a>
+            </li>
+            <li>
+                <a>תקנון</a>
             </li>
             <li>
                 <a href="./contact.html">צור קשר</a>
@@ -18,10 +27,22 @@
         </ul>
     </nav>
     <h1>ברוכים הבאים לאתר החיים הטובים</h1>
-    <hr style="color: black;"/>
-    <img src="../static/goodlife.jpg" alt="" style="border-radius: 250px; padding-top: 30px;">
-    <p style="padding-top: 30px; font-size: larger;">?צריכים מנוחה מהלימודים <br>
+    <hr style="color: black;" />
+    <img id="main-photo" src="../static/goodlife.jpg" alt="">
+    <p style="font-size: larger;">?צריכים מנוחה מהלימודים <br>
         הגעתם למקום הנכון
     </p>
+    <footer class="footer">
+        <div id="phone">
+            <label>052-3456789</label>
+        </div>
+        <span>goodlife@gmail.com</span>
+        <div id="logos">
+            <img class="logo" src="../static/insta-logo.png" />
+            <img class="logo" src="../static/twiter-logo.png" />
+            <img class="logo" src="../static/facebook-logo.png" />
+        </div>
+    </footer>
 </body>
+
 </html>
