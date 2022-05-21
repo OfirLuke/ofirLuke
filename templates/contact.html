@@ -6,34 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="../css/task1.css">
+    <link rel="stylesheet" href="../static/task2.css">
+    <script src="../static/task2.js"></script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="./home.html">עמוד הבית</a>
-            </li>
-            <li>
-                <a>קצת עלינו</a>
-            </li>
-            <li>
-                <a>תקנון</a>
-            </li>
-            <li>
-                <a href="./contact.html">צור קשר</a>
-            </li>
-        </ul>
-    </nav>
+    <header>
+        <img id="pinapple-logo" src="../static/pinapple-logo.png" alt="">
+        <nav>
+            <ul>
+                <li>
+                    <a class="nav-element right-nav" href="./home.html">עמוד הבית</a>
+                </li>
+                <li>
+                    <a class="nav-element" href="./gallery.html">החופשות שלנו</a>
+                </li>
+                <li>
+                    <a class="nav-element" href="./contact.html">צור קשר</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="lineUp">צרו קשר</h1>
+    </header>
     <div>
-        <h1>צרו קשר</h1>
         <hr />
         <p id="intro-para">אנא מלאו את הפרטים הבאים, ונמצא עבורכם את החופשה החלומית</p>
     </div>
-
-    <div id="contact-form">
-        <form>
+    <div id="contact-div">
+        <form id="contact-form" onsubmit="event.preventDefault(); validateMyForm();">
             <label for="FName">שם פרטי</label> <br>
             <input type="text" id="FName" name="FName" minlength="2" required><br>
             <label for="LName">שם משפחה</label><br>
@@ -42,18 +43,21 @@
             <input type="email" id="email" name="email" required><br>
             <label for="price">טווח מחירים</label><br>
             <select class="select-price" name="price">
-                <option value="100-299">100-300</option>
-                <option value="300-599">300-599</option>
-                <option value="600-1000">600-1000</option>
+                <option value="100-299">500-1000</option>
+                <option value="300-599">1000-2000</option>
+                <option value="600-1000">2000-3000</option>
             </select><br>
             <label for="num">מספר נפשות</label><br>
             <input type="number" id="num" name="num" min="1" value="2"><br>
             <label for="agree">אני מאשר לקבל הודעות מאתר החיים הטובים</label> <br>
             <input type="checkbox" id="agree" name="agree" required><br>
-            <button> submit </button>
+            <input type="submit">
+            <!-- <button id="submit-button" onClick="submitMessage()"> submit </button> -->
         </form>
     </div>
-    <footer class="footer" style="padding-top: 110px">
+    <div id="submit-place-holder">
+    </div>
+    <footer class="footer footer2">
         <div id="phone">
             <label>052-3456789</label>
         </div>
@@ -65,5 +69,9 @@
         </div>
     </footer>
 </body>
+
+<script>
+    markCurrentPage();
+</script>
 
 </html>
